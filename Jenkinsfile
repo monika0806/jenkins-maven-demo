@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build with Maven') {
             steps {
-                sh 'mvn clean package'
+                sh '/opt/homebrew/bin/mvn clean package'
             }
         }
 
