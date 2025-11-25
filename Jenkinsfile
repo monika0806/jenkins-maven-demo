@@ -1,13 +1,8 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'jdk17'       // Name must match JDK in Jenkins tools
-        maven 'maven3'    // Name must match Maven in Jenkins tools
-    }
-
     triggers {
-        // Build when GitHub sends a push event
+        // Build when GitHub sends a push event (once webhook/polling is set)
         githubPush()
     }
 
