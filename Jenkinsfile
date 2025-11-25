@@ -9,9 +9,9 @@ pipeline {
     triggers {
         // Build when GitHub sends a push event
         githubPush()
-   
+    }
 
-    stages
+    stages {
         stage('Checkout') {
             steps {
                 checkout scm
